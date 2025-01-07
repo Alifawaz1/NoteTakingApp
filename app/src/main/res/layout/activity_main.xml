@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/backgroundColor"
-    android:padding="20dp"
+    android:background="#FAF9F6"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,74 +15,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Notes"
-        android:textSize="28sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/primaryColor"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp" />
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputTitle"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Note Title"
-        android:layout_marginBottom="16dp"
-        app:boxBackgroundMode="outline"
-        app:boxStrokeColor="@color/primaryColor"
-        app:boxCornerRadiusTopStart="12dp"
-        app:boxCornerRadiusTopEnd="12dp"
-        app:boxCornerRadiusBottomStart="12dp"
-        app:boxCornerRadiusBottomEnd="12dp"
-        app:hintTextColor="@color/secondaryColor">
+        android:queryHint="Search Notes" />
 
-        <EditText
-            android:id="@+id/editTextTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords"
-            android:background="@android:color/transparent"
-            android:textColor="@color/textColor"
-            android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Note Content -->
-    <com.google.android.material.card.MaterialCardView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="20dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp"
-        app:strokeColor="@color/secondaryColor"
-        app:strokeWidth="1dp">
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        android:overScrollMode="never"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent" />
 
-        <EditText
-            android:id="@+id/editTextContent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Write your note here..."
-            android:inputType="textMultiLine"
-            android:gravity="start|top"
-            android:padding="12dp"
-            android:background="@android:color/transparent"
-            android:textColor="@color/textColor"
-            android:textSize="16sp"
-            app:hintTextColor="@color/hintColor" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonSave"
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddNote"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Save Note"
-        android:textAllCaps="false"
-        app:backgroundTint="@color/primaryColor"
-        app:cornerRadius="12dp"
-        android:textColor="@android:color/white"
-        app:iconPadding="8dp"
-        app:iconGravity="start"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add Note"
+        app:backgroundTint="@color/accent"
+        app:elevation="6dp" />
 
 </LinearLayout>

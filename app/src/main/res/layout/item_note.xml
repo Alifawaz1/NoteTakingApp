@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/notebackground"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:clipToPadding="false"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Note Title -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" android:paddingBottom="4dp" />
+
+    <!-- Note Subtitle -->
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note Content goes here..."
+        android:textSize="14sp"
+        android:textColor="#666666" android:paddingBottom="8dp" />
+
+    <!-- Timestamp or other additional info -->
+    <TextView
+        android:id="@+id/textTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date or additional text"
+        android:textSize="12sp"
+        android:textColor="#AAAAAA"
+        android:layout_marginTop="8dp" />
+
+
+    <ImageView
+        android:id="@+id/imageViewDelete"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Delete Note"
+        android:padding="8dp" />
+
+</LinearLayout>

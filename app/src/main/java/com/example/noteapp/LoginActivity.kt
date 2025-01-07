@@ -29,7 +29,6 @@ class LoginActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Initialize FirebaseAuth
         auth = FirebaseAuth.getInstance()
 
         setContent {
